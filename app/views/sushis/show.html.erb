@@ -1,0 +1,18 @@
+<div class = 'container'>
+  <div class = 'child'>
+    <% if @sushi.present? %>
+      <h2><%= @sushi.name  %></h2>
+        <%= image_tag "#{@sushi.sushi_image}", width: '200', height: '200' %>
+      <div>
+      <br>
+        <%= @sushi.comment %>
+      </div>
+      <br><br>
+      <div>
+        <%= link_to "もっと食う！", sushi_path %>
+      </div>
+    <% else %>
+      <h2>情報が見つかりません</h2>
+    <% end %>
+  </div>
+</div>
